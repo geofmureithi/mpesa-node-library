@@ -27,7 +27,7 @@ describe('TransactionStatus Callbacks', function () {
       throw new Error('Something went wrong. Message: ' + e.message)
     })
     emitter.once('transactionStatusSuccessCallback', function (payload) {
-      expect(payload['Result']['ResultDesc']).to.match(/The format of parameter null is invalid./)
+      expect(payload['Result']['ResultDesc']).to.match(/The format of parameter null is invalid/)
       done()
     })
   })
