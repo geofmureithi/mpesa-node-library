@@ -8,7 +8,8 @@
   },
   "main": "src/m-pesa.js",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "snyk": "^1.163.3"
   },
   "devDependencies": {
     "body-parser": "^1.18.2",
@@ -25,7 +26,9 @@
   "scripts": {
     "test": "npm run test-unit && npm run test-integration",
     "test-unit": "mocha tests/unit/*.test.js",
-    "test-integration": "mocha --exit tests/integrations/*.js"
+    "test-integration": "mocha --exit tests/integrations/*.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "mpesa",
@@ -45,5 +48,6 @@
     ]
   },
   "author": "Geoffrey Mureithi",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
